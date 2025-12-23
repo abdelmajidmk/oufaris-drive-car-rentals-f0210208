@@ -151,6 +151,33 @@
   }
 }
 
+@keyframes car-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(-1deg); }
+  75% { transform: translateY(-3px) rotate(1deg); }
+}
+
+@keyframes speed-line {
+  0% { opacity: 0; transform: translateX(20px); }
+  50% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-20px); }
+}
+
+@keyframes road-lines {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-160px); }
+}
+
+@keyframes loading-bar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes wheel-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -168,6 +195,26 @@
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-car-bounce {
+  animation: car-bounce 0.5s ease-in-out infinite;
+}
+
+.animate-speed-line {
+  animation: speed-line 0.8s ease-in-out infinite;
+}
+
+.animate-road-lines {
+  animation: road-lines 0.5s linear infinite;
+}
+
+.animate-loading-bar {
+  animation: loading-bar 1.5s ease-out forwards;
+}
+
+.animate-wheel-spin {
+  animation: wheel-spin 0.5s linear infinite;
 }
 
 .animation-delay-100 { animation-delay: 0.1s; }
