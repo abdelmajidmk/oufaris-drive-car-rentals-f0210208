@@ -1,6 +1,6 @@
-import { Phone, Instagram } from 'lucide-react';
+import { Phone, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { PHONE_NUMBER, INSTAGRAM_URL } from '@/data/cars';
+import { PHONE_NUMBER, INSTAGRAM_URL, WHATSAPP_URL } from '@/data/cars';
 
 const Header = () => {
   return (
@@ -38,13 +38,13 @@ const Header = () => {
                 <Instagram className="h-5 w-5" />
               </Button>
             </a>
-            <a href={`tel:${PHONE_NUMBER}`}>
-              <Button variant="gold" className="hidden sm:flex gap-2 rounded-full">
-                <Phone className="h-4 w-4" />
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="whatsapp" className="hidden sm:flex gap-2 rounded-full">
+                <MessageCircle className="h-4 w-4" />
                 Réserver
               </Button>
-              <Button variant="gold" size="icon" className="sm:hidden rounded-full">
-                <Phone className="h-4 w-4" />
+              <Button variant="whatsapp" size="icon" className="sm:hidden rounded-full">
+                <MessageCircle className="h-4 w-4" />
               </Button>
             </a>
           </div>
