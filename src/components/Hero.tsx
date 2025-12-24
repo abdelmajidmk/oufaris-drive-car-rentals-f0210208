@@ -1,6 +1,6 @@
-import { Phone, ArrowDown, Star } from 'lucide-react';
+import { MessageCircle, ArrowDown, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { PHONE_NUMBER } from '@/data/cars';
+import { WHATSAPP_URL } from '@/data/cars';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
@@ -41,10 +41,10 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
-            <a href={`tel:${PHONE_NUMBER}`}>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="xl" className="w-full sm:w-auto">
-                <Phone className="h-5 w-5 mr-2" />
-                Appelez Maintenant
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Réserver sur WhatsApp
               </Button>
             </a>
             <a href="#fleet">

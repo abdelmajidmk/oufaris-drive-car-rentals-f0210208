@@ -1,6 +1,6 @@
-import { Phone, Instagram, MapPin, Mail, Clock } from 'lucide-react';
+import { Phone, Instagram, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { PHONE_NUMBER, INSTAGRAM_URL } from '@/data/cars';
+import { PHONE_NUMBER, INSTAGRAM_URL, WHATSAPP_URL } from '@/data/cars';
 
 const Contact = () => {
   return (
@@ -79,10 +79,10 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4">
-              <a href={`tel:${PHONE_NUMBER}`} className="block">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="block">
                 <Button variant="hero" size="xl" className="w-full">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Appeler Maintenant
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  Réserver sur WhatsApp
                 </Button>
               </a>
               
